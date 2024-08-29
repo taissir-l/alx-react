@@ -1,27 +1,17 @@
 .Notifications {
-	padding: 2em;
-	border: 2px dashed red;
+  border: thin dotted #e0344a;
+  padding: 4px 16px;
+  float: right;
+}
+[data-notification-type='default'] {
+  color: blue;
 }
 
-button[aria-label='Close'] {
-	border: none;
-	background: none;
-}
-
-.notification-header {
-	display: flex;
-	justify-content: space-between;
+[data-notification-type='urgent'] {
+  color: red;
 }
 
 .menuItem {
-	text-align: right;
-}
-
-[data-notification-type='default'] {
-	color: blue;
-}
-
-[data-urgent],
-[data-notification-type='urgent'] {
-	color: red;
+  text-align: right;
+  margin-right: 16px;
 }
