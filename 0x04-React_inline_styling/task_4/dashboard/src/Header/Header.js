@@ -1,41 +1,43 @@
 import React from 'react';
-import logo from '../assets/holberton-logo.jpg';
+import logo from '../assets/holberton_logo.jpg';
 import { StyleSheet, css } from 'aphrodite';
 
 function Header() {
   return (
-    <header className={css(styles.header)}>
-      <img className={css(styles.logo)} src={logo} alt='logo' />
-      <h1 className={css(styles.title)}>School dashboard</h1>
-    </header>
-  );
+    <div className={css(headerStyles.appHeader)}>
+      <img src={logo} alt="logo" className={css(headerStyles.appLogo)}/>
+      <h1 className={css(headerStyles.h1)}>School dashboard</h1>
+    </div>
+  )
 }
 
-const screenSize = {
-  small: '@media screen and (max-width: 900px)',
-};
+const headerStyles = StyleSheet.create({
+	h1: {
+		marginLeft: '10rem',
+    float: 'right',
+    flex: 2,
+    '@media (max-width: 900px)': {
+      margin: 'auto'
+    }
+	},
 
-const styles = StyleSheet.create({
-  header: {
-    display: 'flex',
-    color: '#e0344a',
-    alignItems: 'center',
-    borderBottom: 'thick solid #e0344a',
+	appHeader: {
+		display: 'flex',
+		flexDirection: 'row',
+		alignItems: 'center',
+		color: '#E11D3F',
+		borderBottom: '1px solid #E11D3F',
     width: '100%',
-    position: 'fixed',
-  },
-  logo: {
-    width: '144px',
-    [screenSize.small]: {
-      width: '240px',
-    },
-  },
-  title: {
-    margin: 0,
-    [screenSize.small]: {
-      fontSize: '40px',
-    },
-  },
+    boxSizing: 'border-box'
+	},
+
+	appLogo: {
+		maxHeight: '200px',
+		maxWidth: '200px',
+    height: 'auto',
+    width: 'auto',
+    flex: 1
+	}
 });
 
 export default Header;
