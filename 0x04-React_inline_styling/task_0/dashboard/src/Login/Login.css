@@ -1,16 +1,10 @@
-.App-body {
-	font-size: 1.4rem;
-	padding: 1.2em;
-	height: 45%;
+.login {
+  padding: 16px 24px;
 }
-
-.form-inputs {
-	display: flex;
-	gap: 2em;
-	align-items: center;
+.login input,
+.login button {
+  margin: 4px;
 }
-
-.form-inputs .input input {
-	height: 1.4rem;
-	margin-left: 10px;
+.login button {
+  cursor: pointer;
 }

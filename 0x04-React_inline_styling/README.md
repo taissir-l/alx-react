@@ -1,6 +1,6 @@
 # React inline styling
 
-Learning outcomes:
+## Learning Objectives
 
 - the differences between using a CSS file and inline styling
 - how to use a CSS-in-JS tool like Aphrodite
